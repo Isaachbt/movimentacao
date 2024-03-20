@@ -29,7 +29,8 @@ public class EmpresaController {
 
         var empresa = new Empresa();
         BeanUtils.copyProperties(dto,empresa);
-        return ResponseEntity.status(HttpStatus.OK).body(empresaService.save(empresa));
+        empresaService.save(empresa);
+        return ResponseEntity.status(HttpStatus.OK).body("Valor depositado com sucesso");
 
     }
 }

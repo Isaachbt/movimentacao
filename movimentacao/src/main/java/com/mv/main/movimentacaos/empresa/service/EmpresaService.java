@@ -34,9 +34,4 @@ public class EmpresaService implements EmpresaServiceInter {
     public Boolean existsByCNPJ(String cnpj) {
         return repository.existsByCNPJ(cnpj);
     }
-
-    @Override
-    public Optional<Empresa> findById(UUID uuid) {
-        return repository.findById(uuid);
-    }
 }

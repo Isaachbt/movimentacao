@@ -22,4 +22,24 @@ public class RestExceptionHandler {
     private ResponseEntity<String> ErrorInternal(ErrorInternal e){
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro ao tentar salvar.");
     }
+
+    @ExceptionHandler(EmpresaNotFound.class)
+    private ResponseEntity<String> EmpresaNotFound(EmpresaNotFound e){
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Empresa não encontrada");
+    }
+
+    @ExceptionHandler(ParamtInvalido.class)
+    private ResponseEntity<String> ParamtInvalido(ParamtInvalido e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Paramentro passado e invalido.");
+    }
+
+    @ExceptionHandler(SaldoInvalido.class)
+    private ResponseEntity<String> SaldoInvalido(SaldoInvalido e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Sando invalido para retirada");
+    }
+
+    @ExceptionHandler(ValorPassadoInvalido.class)
+    private ResponseEntity<String> ValorPassadoInvalido(ValorPassadoInvalido e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Valor passado e invalido");
+    }
 }
