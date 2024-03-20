@@ -9,18 +9,16 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class WebHook {
-    private static String webhookUrl = "https://webhook.site/d6f3bf6e-468b-4417-b473-cd9abb48021b";
+
     public static void enviarMenssagem(String transacoes,double valor)
     {
+
+        String webhookUrl = "https://webhook.site/d6f3bf6e-468b-4417-b473-cd9abb48021b";
+
         URL url = null;
 
         try {
             url = new URL(webhookUrl);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-
-        try {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setDoOutput(true);
@@ -34,6 +32,7 @@ public class WebHook {
                 byte[] input = msg.getBytes("utf-8");
                 os.write(input, 0, input.length);
             }
+            conn.getResponseCode();
             conn.disconnect();
         } catch (IOException e) {
             throw new RuntimeException(e);
