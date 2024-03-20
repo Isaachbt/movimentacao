@@ -1,0 +1,1 @@
+INSERT INTO USERS (id, login, CPF) VALUES ('0bc7781e-2599-4c13-a7ea-7136dee8394e', 'Pedro@gmail', '52998224725');
