@@ -1,0 +1,3 @@
+INSERT INTO USERS (id, login, CPF) VALUES ('0bc7781e-2599-4c13-a7ea-7136dee8394e', 'Pedro@gmail', '52998224725');
+
+INSERT INTO Empresa (id, nome, CNPJ,saldo) VALUES ('a46514e9-54c4-43d6-a653-4841e19f626d', 'NiBank', '49.841.400/0001-19',5000);
