@@ -9,6 +9,4 @@ public interface EmpresaServiceInter {
     Empresa save(Empresa empresa);
 
     Boolean existsByCNPJ(String cnpj);
-
-    Optional<Empresa> findById(UUID uuid);
 }
