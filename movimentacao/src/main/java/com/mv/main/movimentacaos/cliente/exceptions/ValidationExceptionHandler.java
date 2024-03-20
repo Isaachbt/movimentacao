@@ -24,6 +24,6 @@ public class ValidationExceptionHandler {
 
     @ExceptionHandler(UserNotFound.class)
     private ResponseEntity<String> UserNotFound(UserNotFound e){
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Usuario não encontrado");
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
     }
 }
